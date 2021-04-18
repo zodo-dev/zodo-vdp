@@ -10,16 +10,15 @@ import java.util.Set;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class BeneficiarioFields implements MapField<Beneficiario> {
-    private static final String PREFIX = "beneficiario.";
-    public static final String NOME = PREFIX + "nome";
-    public static final String CPF_CNPJ = PREFIX + "cpfCnpj";
-    public static final String ENDERECO_LOGRADOURO = PREFIX + "endereco.logradouro";
-    public static final String ENDERECO_NUMERO = PREFIX + "endereco.numero";
-    public static final String ENDERECO_COMPLEMENTO = PREFIX + "endereco.complemento";
-    public static final String ENDERECO_BAIRRO = PREFIX + "endereco.bairro";
-    public static final String ENDERECO_CEP = PREFIX + "endereco.cep";
-    public static final String ENDERECO_CIDADE = PREFIX + "endereco.cidade";
-    public static final String ENDERECO_UF = PREFIX + "endereco.uf";
+    public static final String NOME = "beneficiario.nome";
+    public static final String CPF_CNPJ = "beneficiario.cpfCnpj";
+    public static final String ENDERECO_LOGRADOURO = "beneficiario.endereco.logradouro";
+    public static final String ENDERECO_NUMERO = "beneficiario.endereco.numero";
+    public static final String ENDERECO_COMPLEMENTO = "beneficiario.endereco.complemento";
+    public static final String ENDERECO_BAIRRO = "beneficiario.endereco.bairro";
+    public static final String ENDERECO_CEP = "beneficiario.endereco.cep";
+    public static final String ENDERECO_CIDADE = "beneficiario.endereco.cidade";
+    public static final String ENDERECO_UF = "beneficiario.endereco.uf";
 
     public static Set<String> allKeys() {
         return Set.of(NOME, CPF_CNPJ, ENDERECO_LOGRADOURO, ENDERECO_NUMERO,

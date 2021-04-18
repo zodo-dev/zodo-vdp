@@ -10,16 +10,15 @@ import java.util.Set;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class PagadorFields implements MapField<Pagador> {
-    private static final String PREFIX = "pagador.";
-    public static final String NOME = PREFIX + "nome";
-    public static final String CPF_CNPJ = PREFIX + "cpfCnpj";
-    public static final String ENDERECO_LOGRADOURO = PREFIX + "endereco.logradouro";
-    public static final String ENDERECO_NUMERO = PREFIX + "endereco.numero";
-    public static final String ENDERECO_COMPLEMENTO = PREFIX + "endereco.complemento";
-    public static final String ENDERECO_BAIRRO = PREFIX + "endereco.bairro";
-    public static final String ENDERECO_CEP = PREFIX + "endereco.cep";
-    public static final String ENDERECO_CIDADE = PREFIX + "endereco.cidade";
-    public static final String ENDERECO_UF = PREFIX + "endereco.uf";
+    public static final String NOME = "pagador.nome";
+    public static final String CPF_CNPJ = "pagador.cpfCnpj";
+    public static final String ENDERECO_LOGRADOURO = "pagador.endereco.logradouro";
+    public static final String ENDERECO_NUMERO = "pagador.endereco.numero";
+    public static final String ENDERECO_COMPLEMENTO = "pagador.endereco.complemento";
+    public static final String ENDERECO_BAIRRO = "pagador.endereco.bairro";
+    public static final String ENDERECO_CEP = "pagador.endereco.cep";
+    public static final String ENDERECO_CIDADE = "pagador.endereco.cidade";
+    public static final String ENDERECO_UF = "pagador.endereco.uf";
 
     public static Set<String> allKeys() {
         return Set.of(NOME, CPF_CNPJ, ENDERECO_LOGRADOURO, ENDERECO_NUMERO, ENDERECO_COMPLEMENTO, ENDERECO_BAIRRO,
