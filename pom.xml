@@ -3,20 +3,21 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>dev.zodo.vdp</groupId>
     <artifactId>zodo-vdp</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <organization>
         <name>ZODO Soluções em Tecnologia</name>
         <url>https://gh.zodo.dev/</url>
     </organization>
-    <modules>
-        <module>zodo-vdp-cobranca</module>
-        <module>zodo-vdp-leitura</module>
-    </modules>
     <name>ZODO VDP - (Variable Data Print)</name>
     <description>
         Biblioteca para auxiliar no desenvolvimento de boletos de cobrança com ficha de compensação bancaria brasileira.
     </description>
+    <url>https://github.com/zodo-dev/zodo-vdp</url>
+    <modules>
+        <module>zodo-vdp-cobranca</module>
+        <module>zodo-vdp-leitura</module>
+    </modules>
     <properties>
         <lombok.version>1.18.16</lombok.version>
         <pdfbox.version>2.0.4</pdfbox.version>
