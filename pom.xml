@@ -88,8 +88,8 @@
 
     <scm>
         <url>https://github.com/zodo-dev/zodo-vdp</url>
-        <connection>https://github.com/zodo-dev/zodo-vdp.git</connection>
-        <developerConnection>https://github.com/zodo-dev/zodo-vdp.git
+        <connection>scm:git:git@github.com:zodo-dev/zodo-vdp.git</connection>
+        <developerConnection>scm:git:git@github.com:zodo-dev/zodo-vdp.git
         </developerConnection>
         <tag>HEAD</tag>
     </scm>
