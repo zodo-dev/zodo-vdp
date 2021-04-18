@@ -14,8 +14,17 @@ import java.time.temporal.ChronoUnit;
 public final class CobrancaUtil {
 
     public static String codigoBarrasFromLinhaDigitavel(String linha) {
-        // TODO Implementar/Validar dados
-        throw new VdpCobrancaUncheckedException("Não implementado");
+        validarLinhaDigitavel(linha);
+        final String linhaSomenteNumeros = linha.replaceAll(Util.PATTERN_NOT_NUMBER, "");
+        String codigoBarras = linhaSomenteNumeros.substring(0, 4);
+        codigoBarras += linhaSomenteNumeros.substring(32, 33);
+        codigoBarras += linhaSomenteNumeros.substring(33, 37);
+        codigoBarras += linhaSomenteNumeros.substring(37, 47);
+        codigoBarras += linhaSomenteNumeros.substring(4, 9);
+        codigoBarras += linhaSomenteNumeros.substring(10, 20);
+        codigoBarras += linhaSomenteNumeros.substring(21, 31);
+        validarCodigoBarras(codigoBarras);
+        return codigoBarras;
     }
 
     public static String linhaDigitavelFromCodigoBarras(String codigo) {
@@ -75,7 +84,17 @@ public final class CobrancaUtil {
         if (!dv.equals(dvCalculado)) {
             throw new VdpCobrancaUncheckedException("Dígito verificador inválido. Informado: {0} calculado: {1}", dv, dvCalculado);
         }
+    }
 
+    public static void validarLinhaDigitavel(String linha) {
+        final String linhaSomenteNumeros = linha.replaceAll(Util.PATTERN_NOT_NUMBER, "");
+        if (Util.isBlank(linhaSomenteNumeros)) {
+            throw new VdpCobrancaUncheckedException("Linha digitável em vazia");
+        }
+
+        if (linhaSomenteNumeros.length() != 47) {
+            throw new VdpCobrancaUncheckedException("Linha digitável deve ter 47 dígitos: {0}", linha);
+        }
     }
 
     public static String modulo10(String numeros) {

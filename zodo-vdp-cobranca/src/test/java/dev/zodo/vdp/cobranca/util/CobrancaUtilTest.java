@@ -33,4 +33,12 @@ class CobrancaUtilTest {
         Assertions.assertEquals(banco.getDigito(), CobrancaUtil.modulo11(banco.getCodigo(), false), banco.getNome());
     }
 
+    @ParameterizedTest
+    @CsvSource({"00199.99994 99999.999990 99999.999990 3 10010000110000,00193100100001100009999999999999999999999999"})
+    void codigoBarrasFromLinhaDigitavelTest(String linhaDigitavel, String CodigoBarras) {
+        CobrancaUtil.validarCodigoBarras(CodigoBarras);
+        Assertions.assertEquals(linhaDigitavel, CobrancaUtil.linhaDigitavelFromCodigoBarras(CodigoBarras));
+        Assertions.assertEquals(CodigoBarras, CobrancaUtil.codigoBarrasFromLinhaDigitavel(linhaDigitavel));
+    }
+
 }

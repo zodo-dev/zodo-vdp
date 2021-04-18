@@ -45,6 +45,7 @@ public enum Banco {
     }
 
     public void configurarCobranca(Cobranca cobranca) {
+        // Extender o enum do banco quando precisar ajustar algo.
     }
 
 }
