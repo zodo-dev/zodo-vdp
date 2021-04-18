@@ -4,11 +4,11 @@
     <parent>
         <artifactId>zodo-vdp</artifactId>
         <groupId>dev.zodo.vdp</groupId>
-        <version>1.0.0</version>
+        <version>1.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>zodo-vdp-cobranca</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <dependencies>
         <dependency>
